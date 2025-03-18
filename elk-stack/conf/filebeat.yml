@@ -1,0 +1,12 @@
+filebeat.inputs:
+  - type: container
+    paths:
+      - "/var/lib/docker/containers/*/*.log"
+    ignore_older: 5m  # Ignore old logs to prevent redundant data
+    json.keys_under_root: true  # Parse JSON logs properly
+
+output.logstash:
+  hosts: ["logstash:5044"]  # Forward logs to Logstash for parsing
+
+setup.kibana:
+  host: "http://kibana:5601"  # Link Filebeat to Kibana for visualization
