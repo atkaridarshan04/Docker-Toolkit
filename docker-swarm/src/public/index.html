@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Swarm Demo</title>
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(to right, #f4f4f4, #d9e4f5);
+            color: #333;
+        }
+        .header {
+            font-size: 2.8em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            color: #2a5298;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .panel {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+        h2 {
+            color: #2a5298;
+            font-size: 1.8em;
+        }
+        p {
+            font-size: 1.2em;
+            color: #333;
+            line-height: 1.6;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .wide-panel {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Docker Swarm Demo</div>
+    <div class="grid-container">
+        <div class="panel">
+            <h2>What is Docker Swarm?</h2>
+            <p>Docker Swarm is a native clustering and orchestration tool for Docker. It allows you to deploy and manage containerized applications across multiple nodes, providing high availability and scalability.</p>
+        </div>
+        <div class="panel">
+            <h2>Docker Swarm vs Docker Stack</h2>
+            <p><strong>Docker Swarm Services:</strong> Deploy individual services in Swarm mode, manually defining replicas and configurations.</p>
+            <p><strong>Docker Stack:</strong> A stack is a collection of services defined in a `docker-compose.yml` file, allowing multi-service deployments with easy management.</p>
+        </div>
+        <div class="panel wide-panel">
+            <h2>Project Overview & Step-by-Step Guide</h2>
+            <p>This project demonstrates how to deploy and scale a containerized application using Docker Swarm.</p>
+            <p>For a complete guide on setting up and deploying this project, visit our GitHub repository:</p>
+            <a href="https://github.com/atkaridarshan04/Docker-Toolkit" target="_blank" class="btn">View on GitHub</a>
+        </div>
+    </div>
+</body>
+</html>
