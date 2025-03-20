@@ -1,0 +1,29 @@
+---
+services:
+  traefik:
+    image: traefik:v3.3
+    container_name: traefik
+    ports:
+      - "80:80" # The HTTP port
+      - "443:443" # The HTTPS port
+      - "8080:8080" # The Web UI (enabled by --api.insecure=true)
+    networks:
+      - traefik
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./config/traefik.yml:/etc/traefik/traefik.yml:ro
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"  # Enable traefik for this service
+      - "traefik.http.routers.nginx.rule=Host(`nginx.localhost`)"  # Set the domain
+      - "traefik.http.routers.nginx.entrypoints=web"  # Use the web entrypoint
+
+networks:
+  traefik:
+    external: true   # Use an existing network named traefik

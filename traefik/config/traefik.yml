@@ -1,0 +1,32 @@
+# Static configuration
+---
+global:
+  checkNewVersion: false  # Disable version check
+  sendAnonymousUsage: false  # Disable telemetry  
+
+
+# Log Levels: [TRACE, DEBUG, INFO, WARN, ERROR, FATAL]
+log:
+  level: ERROR
+
+
+# Enable API and Dashboard here, don't do in production
+api:
+  dashboard: true
+  insecure: true
+
+
+# Entry points
+entryPoints:
+  web:
+    address: :80
+  websecure:
+    address: :443
+
+
+# Docker socket for dynamic configuration
+# For traefik to listen to docker events
+providers:
+  docker:
+    endpoint: "unix:///var/run/docker.sock"
+    exposedByDefault: false  # Only expose services explicitly marked as exposed 
