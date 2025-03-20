@@ -51,6 +51,8 @@ docker ps
 curl -u kibana_system:password http://localhost:9200/_cat/indices?v
 ```
 
+  ![](./images/elasticsearch-status.png)
+
 ### **Check Kibana Status**
 ```sh
 docker logs -f kibana
@@ -94,6 +96,8 @@ chmod 600 filebeat.yml
 ```powershell
 icacls ./conf/filebeat.yml /inheritance:r /grant:r Everyone:RX
 ```
+
+![windows-command](./images/windows-command.png)
 
 ---
 

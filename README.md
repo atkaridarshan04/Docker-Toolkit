@@ -3,6 +3,7 @@
 Welcome to the **Docker Toolkit** repository! This collection of projects showcases different implementations of Docker, covering various use cases such as **logging, networking, orchestration, and monitoring**.  
 
 Each project focuses on a **specific aspect** of Docker’s ecosystem. **Step-by-step implementation guides** are provided for each project.
+
 ## **Projects**  
 
 1. **[Docker Swarm](./docker-swarm/)** - A **demo and basic setup** of Docker Swarm for container orchestration, enabling scaling and service management across multiple nodes.  
@@ -24,4 +25,9 @@ Each project focuses on a **specific aspect** of Docker’s ecosystem. **Step-by
    - Configures Nginx to forward requests to backend services.  
    - Contains **self-signed certificates** for a secure demo setup.  
    - Uses Docker Compose to simplify setup and management.  
----
+
+5. **[Traefik Reverse Proxy](./traefik-reverse_proxy/)** - Implements **Traefik as a modern reverse proxy** and load balancer for Docker services.  
+   - Uses **domain-based routing** to forward requests dynamically.  
+   - Supports **automatic service discovery** using Docker events.  
+   - Provides a **web-based dashboard** to manage routes and monitor traffic.  
+   - Demonstrates integration with **Nginx as a backend service** using **Docker Compose**.  
