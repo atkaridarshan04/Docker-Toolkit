@@ -11,7 +11,8 @@ The setup includes:
 
 This setup can be extended to monitor any application using Prometheus & Grafana.
 
----
+## Architecture
+![docker-monitoring](./images/docker-monitoring.png)
 
 ## Setup & Installation
 
@@ -34,7 +35,6 @@ docker ps
 Expected output should show `nginx`, `nginx-exporter`, `prometheus`, and `grafana` running.
 
 ![docker](./images/docker.png)
----
 
 ## Verification & Testing
 
@@ -71,7 +71,6 @@ nginx_connections_requests
 If data appears, Prometheus is successfully scraping metrics.
 
 ![prom-query](./images/prom-query.png)
----
 
 ## Grafana Setup
 
@@ -126,8 +125,6 @@ Or you can also import prebuilt dashboards.
 View the dashboard
 ![graph-cmp-1](./images/graph-cmp-1.png)
 
----
-
 ## **Simulating Traffic to View in Grafana**
 To generate continuous requests to Nginx and see live data in Grafana, run:
 ```bash
@@ -138,8 +135,6 @@ This will send a request every second. You can adjust the `sleep` value to contr
 Now, check **nginx_connections_active** in your Grafana dashboard to visualize live traffic.
 
 ![graph-cmp-2](./images/graph-cmp-2.png)
-
----
 
 ## **Troubleshooting**
 ### **1. Prometheus Not Scraping Metrics?**
@@ -166,8 +161,6 @@ docker-compose restart prometheus
   curl http://localhost:9090/api/v1/status/config
   ```
 - Ensure **queries return data in Prometheus** before checking Grafana.
-
----
 
 ## **Conclusion**
 You now have a fully functional **monitoring setup using Prometheus & Grafana**! 🚀
