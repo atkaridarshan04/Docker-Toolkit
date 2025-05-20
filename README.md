@@ -1,11 +1,3 @@
-Absolutely! Based on your repo structure and the new **Nginx Reverse Proxy** project you're adding, here's an updated version of your `README.md` that:
-
-* Adds your new project cleanly
-* Maintains consistency with the other project descriptions
-* Uses the folder name we previously discussed (`nginx-reverse-proxy`)
-
----
-
 # **Docker Toolkit**
 
 Welcome to the **Docker Toolkit** repository! This collection of projects showcases different implementations of Docker, covering various use cases such as **logging, networking, orchestration, reverse proxying, and monitoring**.
@@ -46,18 +38,7 @@ Deploys a **monitoring stack** using **Prometheus and Grafana** to collect and v
 
 ---
 
-### 4. **[Traefik Reverse Proxy](./traefik-reverse_proxy/)**
-
-Implements **Traefik as a modern reverse proxy** and load balancer for Docker services.
-
-* Uses **domain-based routing** to forward requests dynamically
-* Supports **automatic service discovery** using Docker events
-* Provides a **web-based dashboard** to manage routes and monitor traffic
-* Demonstrates integration with **Nginx as a backend service**
-
----
-
-### 5. **[Nginx Reverse Proxy](./nginx-reverse-proxy/)**
+### 4. **[Nginx Reverse Proxy](./nginx-reverse-proxy/)**
 
 Demonstrates how to configure **Nginx as a reverse proxy and load balancer** for multiple containerized backend applications.
 
@@ -65,5 +46,16 @@ Demonstrates how to configure **Nginx as a reverse proxy and load balancer** for
 * Uses **Docker Compose** to orchestrate all services, including Nginx
 * Includes a **self-signed SSL certificate** for testing HTTPS
 * Implements **round-robin load balancing** between multiple backend containers
+
+---
+
+### 5. **[Traefik Reverse Proxy](./traefik/)**
+
+Implements **Traefik as a modern reverse proxy** and load balancer for Docker services.
+
+* Uses **domain-based routing** to forward requests dynamically
+* Supports **automatic service discovery** using Docker events
+* Provides a **web-based dashboard** to manage routes and monitor traffic
+* Demonstrates integration with **Nginx as a backend service**
 
 ---
