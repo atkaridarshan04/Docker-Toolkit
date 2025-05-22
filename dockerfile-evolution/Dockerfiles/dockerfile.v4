@@ -1,0 +1,28 @@
+# ────────────── Stage 1: Build ──────────────
+FROM node:20-alpine3.20 AS builder
+WORKDIR /app
+
+# Install dependencies
+COPY package.json package-lock.json ./
+RUN npm ci
+
+# Copy source files and build
+COPY . .
+RUN npm run build
+
+# ────────────── Stage 2: Serve ──────────────
+FROM node:20-alpine3.20 AS runner
+
+# Install serve globally
+RUN npm install -g serve
+
+# Copy built files from builder
+COPY --from=builder /app/dist /app/dist
+
+# Set working directory
+WORKDIR /app
+
+# Expose port and start server
+EXPOSE 3000
+ENTRYPOINT ["serve", "-s", "dist"]
+# ENTRYPOINT ["serve", "-s", "dist", "-l", "80"]
