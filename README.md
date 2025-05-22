@@ -1,44 +1,23 @@
 # **Docker Toolkit**
 
-Welcome to the **Docker Toolkit** repository! This collection of projects showcases different implementations of Docker, covering various use cases such as **logging, networking, orchestration, reverse proxying, and monitoring**.
+Welcome to the **Docker Toolkit** repository! This collection of demo projects showcases different implementations of Docker, covering various use cases such as **optimizing dockerfiles, reverse proxying, logging, networking, orchestration, and monitoring**.
 
 Each project focuses on a **specific aspect** of Docker’s ecosystem. **Step-by-step implementation guides** are provided for each project.
 
----
-
 ## **Projects**
 
-### 1. **[Docker Swarm](./docker-swarm/)**
+### 1. **[Dockerfile Evolution](./dockerfile-evolution/)**
 
-A **demo and basic setup** of Docker Swarm for container orchestration, enabling scaling and service management across multiple nodes.
+A demo showing the **evolution of Dockerfiles** for an app from basic builds to **production-ready, optimized images**.
 
-* Deploys a simple application with **frontend and backend services**
-* Demonstrates how to initialize a **Swarm cluster** and deploy applications using **services and stacks**
-
----
-
-### 2. **[ELK Stack](./elk-stack/)**
-
-Deploys the **Elasticsearch, Logstash, and Kibana (ELK) stack** using Docker Compose for centralized log management.
-
-* Collects logs using **Filebeat** and Docker logging drivers
-* **Elasticsearch** stores and indexes logs
-* **Logstash** processes and transforms incoming log data
-* **Kibana** provides a web-based UI for visualization and analysis
+* Contains 5 Dockerfile versions with **progressive improvements**
+* Applies **best practices** like `.dockerignore`, build caching, and multi-stage builds
+* Includes a **side-by-side image size comparison**.
+* Shown **how to go from dev builds to clean production containers**
 
 ---
 
-### 3. **[Monitoring](./monitoring/)**
-
-Deploys a **monitoring stack** using **Prometheus and Grafana** to collect and visualize system metrics.
-
-* **Prometheus** scrapes metrics from Docker services
-* **Grafana** displays interactive dashboards for real-time insights
-* Integrates **Nginx Prometheus Exporter** to track web server performance
-
----
-
-### 4. **[Nginx Reverse Proxy](./nginx-reverse-proxy/)**
+### 2. **[Nginx Reverse Proxy](./nginx-reverse-proxy/)**
 
 Demonstrates how to configure **Nginx as a reverse proxy and load balancer** for multiple containerized backend applications.
 
@@ -49,7 +28,7 @@ Demonstrates how to configure **Nginx as a reverse proxy and load balancer** for
 
 ---
 
-### 5. **[Traefik Reverse Proxy](./traefik/)**
+### 3. **[Traefik Reverse Proxy](./traefik/)**
 
 Implements **Traefik as a modern reverse proxy** and load balancer for Docker services.
 
@@ -59,3 +38,36 @@ Implements **Traefik as a modern reverse proxy** and load balancer for Docker se
 * Demonstrates integration with **Nginx as a backend service**
 
 ---
+
+### 4. **[Docker Swarm](./docker-swarm/)**
+
+A **demo and basic setup** of Docker Swarm for container orchestration, enabling scaling and service management across multiple nodes.
+
+* Deploys a simple application with **frontend and backend services**
+* Demonstrates how to initialize a **Swarm cluster** and deploy applications using **services and stacks**
+
+---
+
+### 5. **[Monitoring](./monitoring/)**
+
+Deploys a **monitoring stack** using **Prometheus and Grafana** to collect and visualize system metrics.
+
+* **Prometheus** scrapes metrics from Docker services
+* **Grafana** displays interactive dashboards for real-time insights
+* Integrates **Nginx Prometheus Exporter** to track web server performance
+
+---
+
+### 6. **[ELK Stack](./elk-stack/)**
+
+Deploys the **Elasticsearch, Logstash, and Kibana (ELK) stack** using Docker Compose for centralized log management.
+
+* Collects logs using **Filebeat** and Docker logging drivers
+* **Elasticsearch** stores and indexes logs
+* **Logstash** processes and transforms incoming log data
+* **Kibana** provides a web-based UI for visualization and analysis
+
+---
+
+
+
