@@ -1,4 +1,4 @@
-# 🐳 Dockerfile Evolution
+# 🐳 Dockerfile Optimization
 
 This project demonstrates an evolving series of Dockerfiles designed to apply **Docker best practices**, especially focused on:
 - Reducing image size

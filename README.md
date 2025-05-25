@@ -1,12 +1,12 @@
 # **Docker Toolkit**
 
-Welcome to the **Docker Toolkit** repository! This collection of demo projects showcases different implementations of Docker, covering various use cases such as **optimizing dockerfiles, reverse proxying, logging, networking, orchestration, and monitoring**.
+Welcome to the **Docker Toolkit** repository! This collection of demo projects showcases different implementations of Docker, covering various use cases such as **optimizing dockerfiles, reverse proxying, logging, networking, and monitoring**.
 
 Each project focuses on a **specific aspect** of Docker’s ecosystem. **Step-by-step implementation guides** are provided for each project.
 
 ## **Projects**
 
-### 1. **[Dockerfile Evolution](./dockerfile-evolution/)**
+### 1. **[Dockerfile Optimization](./dockerfile-optimization/)**
 
 A demo showing the **evolution of Dockerfiles** for an app from basic builds to **production-ready, optimized images**.
 
@@ -39,16 +39,7 @@ Implements **Traefik as a modern reverse proxy** and load balancer for Docker se
 
 ---
 
-### 4. **[Docker Swarm](./docker-swarm/)**
-
-A **demo and basic setup** of Docker Swarm for container orchestration, enabling scaling and service management across multiple nodes.
-
-* Deploys a simple application with **frontend and backend services**
-* Demonstrates how to initialize a **Swarm cluster** and deploy applications using **services and stacks**
-
----
-
-### 5. **[Monitoring](./monitoring/)**
+### 4. **[Monitoring](./monitoring/)**
 
 Deploys a **monitoring stack** using **Prometheus and Grafana** to collect and visualize system metrics.
 
@@ -58,7 +49,7 @@ Deploys a **monitoring stack** using **Prometheus and Grafana** to collect and v
 
 ---
 
-### 6. **[ELK Stack](./elk-stack/)**
+### 5. **[ELK Stack](./elk-stack/)**
 
 Deploys the **Elasticsearch, Logstash, and Kibana (ELK) stack** using Docker Compose for centralized log management.
 
