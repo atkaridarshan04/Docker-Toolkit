@@ -106,7 +106,7 @@ If successful, Prometheus is connected!
    nginx_connections_active
    ```
 
-   !graph-dash-2](./images/graph-dash-2.png)
+   ![graph-dash-2](./images/graph-dash-2.png)
 4. Click **Apply**
 
 5. Click **Save Dashboard** and name it **Nginx Monitoring**
